@@ -86,7 +86,7 @@ def on_packet(packet):
     if (left_force > HEEL_STRIKE_THRESHOLD or right_force > HEEL_STRIKE_THRESHOLD) and not foot_on_treadmill:
         slip_step_counter += 1
         if slip_step_counter == slip_step_threshold:
-            handle_slip()
+            print("slipping")
         foot_on_treadmill = True
     if foot_on_treadmill and left_force <  TOE_OFF_THRESHOLD and right_force < TOE_OFF_THRESHOLD:
         foot_on_treadmill = False
